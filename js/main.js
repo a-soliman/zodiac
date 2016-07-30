@@ -56,12 +56,9 @@ maxYears = 70
 	}
 
 	// end of Creating droplists
-//=======================================================================
-	
 
-var findZodiac = function() {
 
-	//adressing the zodiac signs
+		//adressing the zodiac signs
 function zodiac(name, sign, period, planet, infoOne, infoTwo, infoThree) {
 	this.name = name,
 	this.sign = sign,
@@ -96,12 +93,57 @@ var aquarius = new zodiac('Aquarius', 'img/aquarius.png', 'Jan. 20 - Feb. 18', '
 
 var pisces = new zodiac('Pisces', 'img/pisces.png', 'Feb. 19 - March 20', 'Neptune', 'The fish is the symbol given to this sign, primarily because fish live in a secretive and mysterious place. Pisces tend to be daydreamers, often dreaming up brilliant ideas and plans which they are unable to facilitate themselves. They have a happy and vibrant inner life that few get to share or see. They are deeply caring about others and don’t like to see people become unhappy.', 'Upside: Pisces are empathetic people, often feeling badly for someone whose life is not going well. They feel the need to reach out to those who are less fortunate and will often find themselves involved in drama that they hadn’t intended. They are kind, caring individuals who feel everything deeply, even though you would not know it on the surface. They can be creative and imaginative when they believe that they have support to make those leaps.', 'Downside: Because they feel everything so intensely, this sign can often become a clinical worrier. They will worry that they are not worrying. This tendency to worry also leads to indecision on their part, fearing that if they make a decision that others disagree with that they will have upset someone. Pisces don’t like to hurt people’s feelings and as such become conflicted when they have to make decisions. They do not do well as leaders, but are impressive support personnel. Sometimes the have a lack of follow through due to this indecisiveness and require a gentle nudge from other signs to complete tasks on time.')
 
+//=======================================================================
 	
 
+var findZodiac = function() {
+
 	// retriving data from user 
-var month = document.getElementById('month').value
-var day = document.getElementById('day').value
-var year = document.getElementById('year'). value
+	var month = document.getElementById('month').value
+	var day = document.getElementById('day').value
+	var year = document.getElementById('year'). value
+
+	//prossing the program
+
+	// if statments 
+	if (month == 3 && day >= 21 || month == 4 && day <= 19) {
+		console.log('Aries')
+	}
+	else if(month == 4 && day >= 20 || month == 5 && day <= 20) {
+		console.log('Taurus')
+	}
+	else if(month == 5 && day >= 21 || month == 6 && day <= 20) {
+		console.log('Gemini')
+	}
+	else if(month == 6 && day >= 21 || month == 7 && day <= 22) {
+		console.log('Cancer')
+	}
+	else if(month == 7 && day >= 23 || month == 8 && day <= 22) {
+		console.log('Leo')
+	}
+	else if(month == 8 && day >= 23 || month == 9 && day <= 22) {
+		console.log('Virgo')
+	}
+	else if(month == 9 && day >= 23 || month == 10 && day <= 22) {
+		console.log('Libra')
+	}
+	else if(month == 10 && day >= 23 || month == 11 && day <= 21) {
+		console.log('Scorpio')
+	}
+	else if(month == 11 && day >= 22 || month == 12 && day <= 21) {
+		console.log('Sagittarius')
+	}
+	else if(month == 12 && day >= 22 || month == 1 && day <= 19) {
+		console.log('Capricorn')
+	}
+	else if(month == 1 && day >= 20 || month == 2 && day <= 18) {
+		console.log('Aquarius')
+	}
+	else if(month == 2 && day >= 19 || month == 3 && day <= 20) {
+		console.log('Aquarius')
+	}
+
+
 
 
 
