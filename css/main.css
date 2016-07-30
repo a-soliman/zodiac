@@ -1,0 +1,15 @@
+.container {
+	text-align: center;
+}
+.day, .month, .year {
+	width: 29%;
+	display: inline-block;
+}
+
+
+@media(max-width: 540px) {
+	.day, .month, .year {
+		width: unset;
+		display: block;
+	}
+}
