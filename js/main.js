@@ -1,4 +1,76 @@
-var zodiac = function(name, sign, period, planet, infoOne, infoTwo, infoThree)
+var months = 12
+var days = 31
+var today = new Date()
+var year = today.getFullYear() +1 
+maxYears = 70
+
+	//Creating the month list
+	for (var i = 1; i <= months; i++) {
+		var monthList = document.getElementById('month')
+		// creating the option element
+		var option = document.createElement('option')
+		// adding the value attributr
+		option.setAttribute('value', i)
+
+		// appending the month
+		option.innerHTML = i
+		//appending the options to thee list
+		monthList.appendChild(option)
+
+	} 
+
+
+	//Creating the dayes list
+	for (var i = 1; i <= days; i++) {
+
+		// getting the id of the drop-list
+		var dayList = document.getElementById('day')
+		// creating the option element
+		var option = document.createElement('option') 
+
+		// adding the value attributr
+		option.setAttribute('value', i)
+		// appending the day
+		option.innerHTML = i
+		//appending the options to thee list
+		dayList.appendChild(option)
+	}
+
+
+	//Creating the Years list
+	for (var i = 0; i < maxYears; i++) {
+		year--
+		
+
+		var yearList = document.getElementById('year')
+		// creating the option element
+		var option = document.createElement('option') 
+
+		// adding the value attributr
+		option.setAttribute('value', year)
+		// appending the year
+		option.innerHTML = year
+		//appending the options to thee list
+		yearList.appendChild(option)
+		
+	}
+
+	// end of Creating droplists
+//=======================================================================
+	
+
+var findZodiac = function() {
+
+	//adressing the zodiac signs
+function zodiac(name, sign, period, planet, infoOne, infoTwo, infoThree) {
+	this.name = name,
+	this.sign = sign,
+	this.period = period,
+	this.planet = planet,
+	this.infoOne = infoOne,
+	this.infoTwo = infoTwo,
+	this.infoThree = infoThree
+}
 
 var aries = new zodiac('Aries', 'img/aries.png', 'March 21 - April 19', 'Mars', 'The symbol for this sign is that of a ram for good reason. Aries is full of life and possesses high energy, which makes this sign always looking for a challenge. The typical Aries person is full of vitality, curiosity, and has a heightened sense of justice. They often excel at anything where a bit of competition is involved, whether this is of a cognitive nature or physical. The challenge is the thing. If there is a chance to win, to best someone, to show off abilities, Aries is in it to win it. The Aries person feels most alive when they are in control and leading others. They are often impatient and abrupt with those whom they feel are not their equals and are in a leadership position. Most Aries do not like being told what to do if the person in charge is less talented than they.', 'Upside: Highly energetic, and has no problem working long hours on a single project. Often take the initiative experiencing new breakthroughs and discoveries. Aries are thorough, painstaking, and have a knack for precise records and clarity. They live hard, love hard, and play hard.', 'Downside: Aries have tunnel vision when working on a project which can make them seem selfish. They can become impatient with those who are not similar to themselves temperamentally and intellectually. The dedication to a project can become stubbornness, possessiveness, and can lead to a withdrawn and sullen attitude. Many Aries who do not feel acknowledged for their accomplishments become sarcastic and rude.')
 
@@ -23,4 +95,15 @@ var capricorn = new zodiac('Capricorn', 'img/capricorn.png', 'Dec. 22 - Jan. 19'
 var aquarius = new zodiac('Aquarius', 'img/aquarius.png', 'Jan. 20 - Feb. 18', 'Uranus', 'The man who carries the pitcher of water is the symbol for this sign. This is because Aquarians are often generous with their time and resources. For this reason this sign often find themselves in occupations where they are helping on some humanitarian level. They are interested and have a deep concern for the welfare of others. They never know a stranger and are generally loved by all around them. Aquarians never meet a stranger and often will go out of their way to meet with people that they’ve not heard from for years. Connection is at the core of this sign.', 'Upside: Aquarians are among the friendliest of the signs, making friends everywhere. They are often chosen among co-workers and family for special awards and honors because of their ability to network. Highly intelligent they are energetic and talented, often using their abilities to help others. Despite their extensive people skills, they often crave alone time to reflect and think about things. Meditation is recommended for this sign as it helps to maintain that sense of alone time, while at the same time a feeling of connectedness with something greater than themselves.', 'Downside: If this sign does not have alone time and time to do much desired reflection, they become dour, emotionless, and even are prone to depressive interludes. They can become highly resentful if they believe that their voice is not being truly heard or valued. Because they do self-reflect, this sign can become quite eccentric in some of the hobbies that they pursue, or activities they enjoy.')
 
 var pisces = new zodiac('Pisces', 'img/pisces.png', 'Feb. 19 - March 20', 'Neptune', 'The fish is the symbol given to this sign, primarily because fish live in a secretive and mysterious place. Pisces tend to be daydreamers, often dreaming up brilliant ideas and plans which they are unable to facilitate themselves. They have a happy and vibrant inner life that few get to share or see. They are deeply caring about others and don’t like to see people become unhappy.', 'Upside: Pisces are empathetic people, often feeling badly for someone whose life is not going well. They feel the need to reach out to those who are less fortunate and will often find themselves involved in drama that they hadn’t intended. They are kind, caring individuals who feel everything deeply, even though you would not know it on the surface. They can be creative and imaginative when they believe that they have support to make those leaps.', 'Downside: Because they feel everything so intensely, this sign can often become a clinical worrier. They will worry that they are not worrying. This tendency to worry also leads to indecision on their part, fearing that if they make a decision that others disagree with that they will have upset someone. Pisces don’t like to hurt people’s feelings and as such become conflicted when they have to make decisions. They do not do well as leaders, but are impressive support personnel. Sometimes the have a lack of follow through due to this indecisiveness and require a gentle nudge from other signs to complete tasks on time.')
+
+	
+
+	// retriving data from user 
+var month = document.getElementById('month').value
+var day = document.getElementById('day').value
+var year = document.getElementById('year'). value
+
+
+
+}// ending the function
 
